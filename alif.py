@@ -10,8 +10,7 @@ import requests,json,urllib3
 from random import randint
 from bs4 import BeautifulSoup
 #from gtts import gTTS
-from googletrans import Translator
-import youtube_dl
+from googletrans import Translatimport youtube_dl
 from time import sleep
 #from zalgo_text import zalgo
 from threading import Thread,Event

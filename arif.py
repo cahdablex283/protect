@@ -1,7 +1,7 @@
 #CANNIBAL===Version SB
 
-import LINEPY
-from LINEPY import *
+import linepy
+from linepy import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
 from time import sleep

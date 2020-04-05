@@ -56,7 +56,7 @@ sw = LINE("@gmail.com","password")
 sw.log("Auth Token : " + str(sw.authToken))
 sw.log("Timeline Token : " + str(sw.tl.channelAccessToken))
 #==============[●●●●●●]==============#
-print ("=========== ʟᴏɢɪɴ sᴜᴄᴄᴇs ʙᴏssᴋᴜ ᴀʙɪ ==========")
+print ("=========== ʟᴏɢɪɴ sᴜᴄᴄᴇs ʙᴏssᴋᴜ ==========")
 
 oepoll = OEPoll(cl)
 

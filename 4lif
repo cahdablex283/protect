@@ -30,10 +30,10 @@ print ("╔══════════════════\n╠ ʟᴏɢɪ
 #======================================================
 oepoll = OEPoll(cl)
 call = cl
-creator = ["u6391e64065bdad45f2ef9f473863d8b5w"]
-owner = ["u6391e64065bdad45f2ef9f473863d8b5"]
-admin = ["u6391e64065bdad45f2ef9f473863d8b5"]
-staff = ["u6391e64065bdad45f2ef9f473863d8b5"]
+creator = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
+owner = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
+admin = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
+staff = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
 #==============================================================================
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid

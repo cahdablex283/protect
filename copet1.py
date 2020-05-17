@@ -22,7 +22,7 @@ requests.packages.urllib3.disable_warnings()
 # ᴘʀɪᴍᴇʀʏ ᴅᴀɴ ɢᴍᴀɪʟ
 #=====================================
 # ᴀᴋᴜɴ ᴜᴛᴀᴍᴀ
-cl = LINE("EP72ChTag70xrhsQlrX0.pk5PrpEGJWVMcGOSZIplCa.WTimRbPpo6XJ0R9IbNj4cQjneZY52iU0tJ7BNIAY2Xk=")
+cl = LINE("")
 cl.log("Auth Token : " + str(cl.authToken))
 cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 print ("╔══════════════════\n╠ ʟᴏɢɪɴ sᴜᴄᴄᴇs\n╚══════════════════")

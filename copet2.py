@@ -14,9 +14,22 @@ botStart = time.time()
 msg_dict = {}
 msg_dict1 = {}
 #==============[ token 1 ]==============#
-cl = LINE("")
-cl.log("Auth Token : " + str(cl.authToken))
-cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))  
+try:
+    header = "ios_ipad"
+    auth = "Z6vMBEnkp04n"
+    result = json.loads(requests.get("https://api.boteater.us/line_qr_v2?header="+header+"&auth="+auth).text)
+    print("Login IP: {}".format(result["result"]["login_ip"]))
+    print("QR Link: {}".format(result["result"]["qr_link"]))
+    result = json.loads(requests.get(result["result"]["callback"]+"&auth="+auth).text)
+    if result["status"] != 200:
+      raise Exception("Timeout!!!")
+    print("Pincode: "+result["result"]["pin_code"])
+    result = json.loads(requests.get(result["result"]["callback"]+"&auth="+auth).text)
+    if result["status"] != 200:
+      raise Exception("Timeout!!!")
+    cl = LINE(result["result"]["token"],appName="IOSIPAD\t9.18.1\tiPhone X\t12.4.1")
+    print("Login Sukses")
+except:pass 
 #==============[●●●●●●]==============#
 print ("=========== LOGIN SUCSES ==========")
 
@@ -29,15 +42,15 @@ KAC = [cl]
 ABC = [cl]
 #GHOST = [sw]
 Bots = [mid]
-creator = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
-owner = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
-admin = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
-staff = ["u3cae6944f7a08f0be60a0a2cce23cb70"]
-Drop_Xv = "u3cae6944f7a08f0be60a0a2cce23cb70" #ID_DROPING_BOTS
-Xv_WIN = "u3cae6944f7a08f0be60a0a2cce23cb70" #ID_WINDOWS_XP
-Xv_LAN = "u3cae6944f7a08f0be60a0a2cce23cb70" #ID_SERVER_LAN
-Xv_Servic = "u3cae6944f7a08f0be60a0a2cce23cb70" #ID_PROV_SERVICE
-Xv_DxD = "u3cae6944f7a08f0be60a0a2cce23cb70" #ID_SYSTEM_BOTS
+creator = ["uafe5c4198aa3bbceba5502798d8a2c16"]
+owner = ["uafe5c4198aa3bbceba5502798d8a2c16"]
+admin = ["uafe5c4198aa3bbceba5502798d8a2c16"]
+staff = ["uafe5c4198aa3bbceba5502798d8a2c16"]
+Drop_Xv = "uafe5c4198aa3bbceba5502798d8a2c16" #ID_DROPING_BOTS
+Xv_WIN = "uafe5c4198aa3bbceba5502798d8a2c16" #ID_WINDOWS_XP
+Xv_LAN = "uafe5c4198aa3bbceba5502798d8a2c160" #ID_SERVER_LAN
+Xv_Servic = "uafe5c4198aa3bbceba5502798d8a2c16" #ID_PROV_SERVICE
+Xv_DxD = "uafe5c4198aa3bbceba5502798d8a2c16" #ID_SYSTEM_BOTS
 Line_Import = [Drop_Xv,Xv_WIN,Xv_LAN,Xv_Servic,Xv_DxD] #ALL_IMPORTING
 Cannibal = admin + staff
 
@@ -53,7 +66,7 @@ settings = {
     "group":{},
     "groupPicture":False,
     "changePicture":False,
-    "comment":"ᴛʜᴀɴᴋs ᴛᴏ ᴀᴅᴅ ᴍᴇ..\n\n                 ᴼᴾᴱᴺ ᴼᴿᴰᴱᴿ\n────────┅┅───────\nᴛᴇʀɪᴍᴀ ᴊᴀsᴀ ᴘᴇɴɢʜᴀɴᴄᴜʀ:\n[]➣ ᴍᴀɴᴛᴀɴ\n[]➣ ᴋᴀɴɢ ʙᴀᴘᴇʀ\n[]➣ ᴋᴀɴɢ-ᴋᴜɴɢ\n[]➣ ᴋᴀɴɢ ᴘᴀʟᴀᴋ\n[]➣ ᴘᴇʀᴜsᴀᴋ ʜᴜʙᴜɴɢᴀɴ\n[]➣ ᴘᴏᴋᴏᴋɴʏᴀ ᴀᴘᴀ ᴀᴊᴀ ᴅᴇʜʜ\n\nsᴇᴡᴀɪɴ ʙᴏᴛ:\n[]➣ ᴘᴇᴍʙᴜᴀᴛᴀɴ ɢɪᴛʜᴜʙ sᴄ ʙᴏᴛ 100K/SC\n[]➣ ᴘʀᴏᴛᴇᴄᴛ ʀᴏᴏᴍ ᴇᴠᴇɴᴛ /dll 200K\n[]➣ sᴇʟғʙᴏᴛ (ғʀᴇᴇ ʟᴏɢɪɴ ᴊs ʙʏᴘᴀss) 50K\n────────┅┅───────\nʙᴇʀɢᴀʀᴀɴsɪ sᴇʟᴀᴍᴀ sᴇᴡᴀ\nʜᴀʀɢᴀ ɴᴇɢᴏ, ᴊɪᴋᴀ ʙᴇʀᴍɪɴᴀᴛ\nʜᴜʙᴜɴɢɪ ᴋᴀᴍɪ.\n────────┅┅───────\n                  ɪɴᴊᴀᴋ ɴɪʜ\n[]➣ line.me/ti/p/~aryopandelaki\n[]➣ line.me/ti/p/~cannibalkiller\n────────┅┅───────\nCannibal Bot Protection\n────────┅┅───────",
+    "comment":"ᴛʜᴀɴᴋs ᴛᴏ ᴀᴅᴅ ᴍᴇ..\n\n                 ᴼᴾᴱᴺ ᴼᴿᴰᴱᴿ\n────────┅┅───────\nᴛᴇʀɪᴍᴀ ᴊᴀsᴀ ᴘᴇɴɢʜᴀɴᴄᴜʀ:\n[]➣ ᴍᴀɴᴛᴀɴ\n[]➣ ᴋᴀɴɢ ʙᴀᴘᴇʀ\n[]➣ ᴋᴀɴɢ-ᴋᴜɴɢ\n[]➣ ᴋᴀɴɢ ᴘᴀʟᴀᴋ\n[]➣ ᴘᴇʀᴜsᴀᴋ ʜᴜʙᴜɴɢᴀɴ\n[]➣ ᴘᴏᴋᴏᴋɴʏᴀ ᴀᴘᴀ ᴀᴊᴀ ᴅᴇʜʜ\n\nsᴇᴡᴀɪɴ ʙᴏᴛ:\n[]➣ ᴘᴇᴍʙᴜᴀᴛᴀɴ ɢɪᴛʜᴜʙ sᴄ ʙᴏᴛ 100K/SC\n[]➣ ᴘʀᴏᴛᴇᴄᴛ ʀᴏᴏᴍ ᴇᴠᴇɴᴛ /dll 200K\n[]➣ sᴇʟғʙᴏᴛ (ғʀᴇᴇ ʟᴏɢɪɴ ᴊs ʙʏᴘᴀss) 50K\n────────┅┅───────\nʙᴇʀɢᴀʀᴀɴsɪ sᴇʟᴀᴍᴀ sᴇᴡᴀ\nʜᴀʀɢᴀ ɴᴇɢᴏ, ᴊɪᴋᴀ ʙᴇʀᴍɪɴᴀᴛ\nʜᴜʙᴜɴɢɪ ᴋᴀᴍɪ.\n────────┅┅───────\n                  ɪɴᴊᴀᴋ ɴɪʜ\n[]➣ http://line.me/ti/p/~akusayangpadamu12\n[]➣ http://line.me/ti/p/~akusayangpadamu12\n────────┅┅───────\n Bot Protection\n────────┅┅───────",
     "autoJoinTicket":False,
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -116,7 +129,7 @@ wait = {
     "mention":"Ciluk bah Yang ngintip mending Gabung Chat sini -_-",
     "Respontag":"Gak usah ngetag mending pm bisa desahan",
     "welcome":"Selamat datang & semoga betah n bahagia",
-    "message":"ᴛʜᴀɴᴋs ᴛᴏ ᴀᴅᴅ ᴍᴇ..\n\n                 ᴼᴾᴱᴺ ᴼᴿᴰᴱᴿ\n────────┅┅───────\nᴛᴇʀɪᴍᴀ ᴊᴀsᴀ ᴘᴇɴɢʜᴀɴᴄᴜʀ:\n[]➣ ᴍᴀɴᴛᴀɴ\n[]➣ ᴋᴀɴɢ ʙᴀᴘᴇʀ\n[]➣ ᴋᴀɴɢ-ᴋᴜɴɢ\n[]➣ ᴋᴀɴɢ ᴘᴀʟᴀᴋ\n[]➣ ᴘᴇʀᴜsᴀᴋ ʜᴜʙᴜɴɢᴀɴ\n[]➣ ᴘᴏᴋᴏᴋɴʏᴀ ᴀᴘᴀ ᴀᴊᴀ ᴅᴇʜʜ\n\nsᴇᴡᴀɪɴ ʙᴏᴛ:\n[]➣ ᴘᴇᴍʙᴜᴀᴛᴀɴ ɢɪᴛʜᴜʙ sᴄ ʙᴏᴛ 100K/SC\n[]➣ ᴘʀᴏᴛᴇᴄᴛ ʀᴏᴏᴍ ᴇᴠᴇɴᴛ /dll 200K\n[]➣ sᴇʟғʙᴏᴛ (ғʀᴇᴇ ʟᴏɢɪɴ ᴊs ʙʏᴘᴀss) 50K\n────────┅┅───────\nʙᴇʀɢᴀʀᴀɴsɪ sᴇʟᴀᴍᴀ sᴇᴡᴀ\nʜᴀʀɢᴀ ɴᴇɢᴏ, ᴊɪᴋᴀ ʙᴇʀᴍɪɴᴀᴛ\nʜᴜʙᴜɴɢɪ ᴋᴀᴍɪ.\n────────┅┅───────\n                  ɪɴᴊᴀᴋ ɴɪʜ\n[]➣ line.me/ti/p/~aryopandelaki\n[]➣ line.me/ti/p/~cannibalkiller\n────────┅┅───────\nCannibal Bot Protection\n────────┅┅───────",
+    "message":"ᴛʜᴀɴᴋs ᴛᴏ ᴀᴅᴅ ᴍᴇ..\n\n                 ᴼᴾᴱᴺ ᴼᴿᴰᴱᴿ\n────────┅┅───────\nᴛᴇʀɪᴍᴀ ᴊᴀsᴀ ᴘᴇɴɢʜᴀɴᴄᴜʀ:\n[]➣ ᴍᴀɴᴛᴀɴ\n[]➣ ᴋᴀɴɢ ʙᴀᴘᴇʀ\n[]➣ ᴋᴀɴɢ-ᴋᴜɴɢ\n[]➣ ᴋᴀɴɢ ᴘᴀʟᴀᴋ\n[]➣ ᴘᴇʀᴜsᴀᴋ ʜᴜʙᴜɴɢᴀɴ\n[]➣ ᴘᴏᴋᴏᴋɴʏᴀ ᴀᴘᴀ ᴀᴊᴀ ᴅᴇʜʜ\n\nsᴇᴡᴀɪɴ ʙᴏᴛ:\n[]➣ ᴘᴇᴍʙᴜᴀᴛᴀɴ ɢɪᴛʜᴜʙ sᴄ ʙᴏᴛ 100K/SC\n[]➣ ᴘʀᴏᴛᴇᴄᴛ ʀᴏᴏᴍ ᴇᴠᴇɴᴛ /dll 200K\n[]➣ sᴇʟғʙᴏᴛ (ғʀᴇᴇ ʟᴏɢɪɴ ᴊs ʙʏᴘᴀss) 50K\n────────┅┅───────\nʙᴇʀɢᴀʀᴀɴsɪ sᴇʟᴀᴍᴀ sᴇᴡᴀ\nʜᴀʀɢᴀ ɴᴇɢᴏ, ᴊɪᴋᴀ ʙᴇʀᴍɪɴᴀᴛ\nʜᴜʙᴜɴɢɪ ᴋᴀᴍɪ.\n────────┅┅───────\n                  ɪɴᴊᴀᴋ ɴɪʜ\n[]➣ http://line.me/ti/p/~akusayangpadamu12\n[]➣ http://line.me/ti/p/~akusayangpadamu12\n────────┅┅───────\n Bot Protection\n────────┅┅───────",
     }
 
 read = {
@@ -311,7 +324,7 @@ def sendTemplates(to, data):
 def sendTextTemplate(to, text):
     data = {
             "type": "flex",
-            "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+            "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "contents": {
   "styles": {
     "body": {
@@ -354,7 +367,7 @@ def sendTextTemplate(to, text):
 def sendTextTemplate8(to, text):
     data = {
                                 "type": "flex",
-                                "altText": "{}  􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿".format(cl.getProfile().displayName),
+                                "altText": "{} ⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶".format(cl.getProfile().displayName),
                                 "contents": {
   "type": "bubble",
   "body": {
@@ -412,7 +425,7 @@ def sendTextTemplate8(to, text):
         "color": "#7CFC00",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       },
@@ -422,7 +435,7 @@ def sendTextTemplate8(to, text):
       },
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
@@ -441,7 +454,7 @@ def sendTextTemplate8(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
@@ -457,7 +470,7 @@ def sendTextTemplate8(to, text):
 def sendTextTemplate7(to, text):
     data = {
                                 "type": "flex",
-                                "altText": "{} 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿".format(cl.getProfile().displayName),
+                                "altText": "{} ⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶".format(cl.getProfile().displayName),
                                 "contents": {
   "type": "bubble",
   "body": {
@@ -515,7 +528,7 @@ def sendTextTemplate7(to, text):
         "color": "#7CFC00",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       },
@@ -525,14 +538,14 @@ def sendTextTemplate7(to, text):
       },
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
         "color": "#FFD700",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       }
@@ -544,7 +557,7 @@ def sendTextTemplate7(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
@@ -560,7 +573,7 @@ def sendTextTemplate7(to, text):
 def sendTextTemplate6(to, text):
     data = {
                                 "type": "flex",
-                                "altText": "{} 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿 ".format(cl.getProfile().displayName),
+                                "altText": "{} ⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶 ".format(cl.getProfile().displayName),
                                 "contents": {
   "type": "bubble",
   "body": {
@@ -618,7 +631,7 @@ def sendTextTemplate6(to, text):
         "color": "#7CFC00",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       },
@@ -628,14 +641,14 @@ def sendTextTemplate6(to, text):
       },
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
         "color": "#FFD700",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       }
@@ -647,7 +660,7 @@ def sendTextTemplate6(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
@@ -663,7 +676,7 @@ def sendTextTemplate6(to, text):
 def sendTextTemplate4(to, text):
     data = {
                                 "type": "flex",
-                                "altText": "{} 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿".format(cl.getProfile().displayName),
+                                "altText": "{} ⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶".format(cl.getProfile().displayName),
                                 "contents": {
   "type": "bubble",
   "body": {
@@ -721,7 +734,7 @@ def sendTextTemplate4(to, text):
         "color": "#7CFC00",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       },
@@ -731,14 +744,14 @@ def sendTextTemplate4(to, text):
       },
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
         "color": "#FFD700",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       }
@@ -750,7 +763,7 @@ def sendTextTemplate4(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
@@ -766,7 +779,7 @@ def sendTextTemplate4(to, text):
 def sendTextTemplate5(to, text):
     data = {
             "type": "flex",
-            "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+            "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "contents": {
   "type": "bubble",
   "body": {
@@ -808,7 +821,7 @@ def sendTextTemplate5(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xl",
         "wrap": True,
         "weight": "bold",
@@ -823,7 +836,7 @@ def sendTextTemplate5(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "md",
         "wrap": True,
         "weight": "bold",
@@ -839,7 +852,7 @@ def sendTextTemplate5(to, text):
 def sendTextTemplate1(to, text):
     data = {
                 "type": "template",
-                "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+                "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
                 "contents": {
                     "type": "bubble",
                     "body": {
@@ -864,7 +877,7 @@ def sendTextTemplate1(to, text):
 def sendTextTemplate2(to, text):
     data = {
             "type": "flex",
-            "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+            "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "contents": {
   "styles": {
     "body": {
@@ -907,7 +920,7 @@ def sendTextTemplate2(to, text):
 def sendTextTemplate3(to, text):
     data = {
             "type": "flex",
-            "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+            "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "contents": {
   "type": "bubble",
   "body": {
@@ -964,7 +977,7 @@ def sendTextTemplate3(to, text):
         "color": "#000000",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       }
@@ -976,7 +989,7 @@ def sendTextTemplate3(to, text):
     "contents": [
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "md",
         "wrap": True,
         "weight": "bold",
@@ -1003,7 +1016,7 @@ def sendStickerTemplate(to, text):
                                   "size": "full", 
                                   "action": {
                                       "type": "uri",
-                                      "uri": "http://line.me/ti/p/~aryopandelaki"
+                                      "uri": "http://line.me/ti/p/~akusayangpadamu12"
            }                                                
  }
 ]
@@ -1024,7 +1037,7 @@ def sendStickerTemplate(to, text):
                                   "size": "full", 
                                   "action": {
                                       "type": "uri",
-                                      "uri": "http://line.me/ti/p/~aryopandelaki"
+                                      "uri": "http://line.me/ti/p/~akusayangpadamu12"
            }                                                
  }
 ]
@@ -1039,7 +1052,7 @@ def youtubeMp3(to, link):
         time.sleep(2)
         os.remove('draxz.mp3')
     except Exception as e:
-        cl.sendMessage(to, 'Cannibal\nʟɪɴᴋ ᴀɴᴅᴀ sᴀʟᴀʜ')
+        cl.sendMessage(to, 'Anumu\nʟɪɴᴋ ᴀɴᴅᴀ sᴀʟᴀʜ')
 def youtubeMp4(to, link):
     subprocess.getoutput('youtube-dl --format mp4 --output draxz.mp4 {}'.format(link))
     try:
@@ -1047,7 +1060,7 @@ def youtubeMp4(to, link):
         time.sleep(2)
         os.remove('draxz.mp4')
     except Exception as e:
-        cl.sendMessage(to, ' ᴇʀʀᴏʀ\nʟɪɴᴋ ᴀɴᴅᴀ sᴀʟᴀʜ', contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'ᴇʀʀᴏʀ', 'AGENT_LINK': 'https://line.me/ti/p/~aryopandelaki'})
+        cl.sendMessage(to, ' ᴇʀʀᴏʀ\nʟɪɴᴋ ᴀɴᴅᴀ sᴀʟᴀʜ', contentMetadata = {'AGENT_ICON': 'http://dl.profile.line-cdn.net/'+client.getContact(clientMid).pictureStatus, 'AGENT_NAME': 'ᴇʀʀᴏʀ', 'AGENT_LINK': 'http://line.me/ti/p/~akusayangpadamu12'})
 
 def delExpire():
     if temp_flood != {}:
@@ -1058,7 +1071,7 @@ def delExpire():
                     temp_flood[tmp]["time"] = time.time()
                     try:
                         veza = "ʙᴏᴛ ᴀᴋᴛɪғ ʙᴏssᴋᴜ"
-                        cl.sendMessage(tmp, veza, {'AGENT_LINK': "https://line.me/ti/p/~aryopandelaki", 'AGENT_ICON': "http://klikuntung.com/images/messengers/line-logo.png", 'AGENT_NAME': "Detect Spam "})        
+                        cl.sendMessage(tmp, veza, {'AGENT_LINK': "http://line.me/ti/p/~akusayangpadamu12", 'AGENT_ICON': "http://klikuntung.com/images/messengers/line-logo.png", 'AGENT_NAME': "Detect Spam "})        
                     except Exception as error:
                         logError(error)
 
@@ -1070,12 +1083,12 @@ def delExpirev2():
                     temp_flood[tmp]["time"] = time.time()
                     try:
                         veza = "ʙᴏᴛ ᴀᴋᴛɪғ ʙᴏssᴋᴜ"
-                        cl.sendMessage(tmp, veza, {'AGENT_LINK': "https://line.me/ti/p/~aryopandelaki", 'AGENT_ICON': "http://klikuntung.com/images/messengers/line-logo.png", 'AGENT_NAME': "Detect Spam "})        
+                        cl.sendMessage(tmp, veza, {'AGENT_LINK': "http://line.me/ti/p/~akusayangpadamu12", 'AGENT_ICON': "http://klikuntung.com/images/messengers/line-logo.png", 'AGENT_NAME': "Detect Spam "})        
                     except Exception as error:
                         logError(error)    
 
 def musik(to):
-    contentMetadata={'previewUrl': "http://dl.profile.line-cdn.net/"+cl.getContact(mid).picturePath, 'i-installUrl': 'http://itunes.apple.com/app/linemusic/id966142320', 'type': 'mt', 'subText': cl.getContact(mid).statusMessage if cl.getContact(mid).statusMessage != '' else 'http://line.me/ti/p/~aryopandelaki', 'a-installUrl': 'market://details?id=jp.linecorp.linemusic.android', 'a-packageName': 'jp.linecorp.linemusic.android', 'countryCode': 'JP', 'a-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'i-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'text': cl.getContact(mid).displayName, 'id': 'mt000000000d69e2db', 'linkUri': 'https://music.cl.cl/launch?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1','MSG_SENDER_ICON': "https://os.me.naver.jp/os/p/"+mid,'MSG_SENDER_NAME':  cl.getContact(mid).displayName,}
+    contentMetadata={'previewUrl': "http://dl.profile.line-cdn.net/"+cl.getContact(mid).picturePath, 'i-installUrl': 'http://itunes.apple.com/app/linemusic/id966142320', 'type': 'mt', 'subText': cl.getContact(mid).statusMessage if cl.getContact(mid).statusMessage != '' else 'http://line.me/ti/p/~akusayangpadamu12', 'a-installUrl': 'market://details?id=jp.linecorp.linemusic.android', 'a-packageName': 'jp.linecorp.linemusic.android', 'countryCode': 'JP', 'a-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'i-linkUri': 'linemusic://open?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1', 'text': cl.getContact(mid).displayName, 'id': 'mt000000000d69e2db', 'linkUri': 'https://music.cl.cl/launch?target=track&item=mb00000000016197ea&subitem=mt000000000d69e2db&cc=JP&from=lc&v=1','MSG_SENDER_ICON': "https://os.me.naver.jp/os/p/"+mid,'MSG_SENDER_NAME':  cl.getContact(mid).displayName,}
     return cl.sendMessage(to, cl.getContact(mid).displayName, contentMetadata, 19)
 
 def sendMention2(to, mid, firstmessage, lastmessage):
@@ -1105,7 +1118,7 @@ def help():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage = "┏═════════════════┓" + "\n" + \
-                  "   °☯️°「 ------􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿------ 」°☯️°" + "\n" + \
+                  "   °☯️°「 ------⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶------ 」°☯️°" + "\n" + \
                   "┗═════════════════┛" + "\n" + \
                   "╔═════════════════┓" + "\n" + \
                   "║°☯️° " + key + "Me\n" + \
@@ -1148,7 +1161,7 @@ def helpbot():
     key = Setmain["keyCommand"]
     key = key.title()
     helpMessage1 = "┏═════════════════┓" + "\n" + \
-                  "   °☯️°「 ------􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿------ 」°☯️°" + "\n" + \
+                  "   °☯️°「 ------⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶------ 」°☯️°" + "\n" + \
                   "┗═════════════════┛" + "\n" + \
                   "╔═════════════════┓" + "\n" + \
                   "║°☯️° " + key + "Blc\n" + \
@@ -1179,7 +1192,7 @@ def helpbot():
                   "║°☯️° " + key + "Gift:「Mid 」「Jumlah」\n" + \
                   "║°☯️° " + key + "Spam:「Mid」「Jumlah」\n" + \
                   "╚═══════════════" + "\n" + \
-                  "╚═══════════════°☯️°\n°☯️° Suᴘᴘᴏʀᴛ:\n\n╔═ஜ°° Cʀᴇᴀᴛᴇᴅ Bʏ °°ஜ══╗\n╠\n╚═ஜ°°􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿°°ஜ═╝"
+                  "╚═══════════════°☯️°\n°☯️° Suᴘᴘᴏʀᴛ:\n\n╔═ஜ°° Cʀᴇᴀᴛᴇᴅ Bʏ °°ஜ══╗\n╠\n╚═ஜ°°⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶°°ஜ═╝"
                   
     return helpMessage1
 
@@ -1407,7 +1420,7 @@ def bot(op):
                 contact = cl.getContact(op.param2)
                 data = {
                         "type": "flex",
-                        "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+                        "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
                         "contents": {
   "type": "bubble",
   "body": {
@@ -1436,7 +1449,7 @@ def bot(op):
           },
           {
             "type": "text",
-            "text": "☯️sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ\nᴅɪ ʀᴏᴏᴍ ᴋᴀᴍɪ ",
+            "text": "☯️sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ\nᴅɪ ʀᴏᴏᴍ ᴋᴀᴍɪ ",
             "size": "md",
             "weight": "bold",
             "wrap": True,
@@ -1483,7 +1496,7 @@ def bot(op):
         "color": "#7CFC00",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       },
@@ -1493,14 +1506,14 @@ def bot(op):
       },
       {
         "type": "text",
-        "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+        "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
         "size": "xxl",
         "wrap": True,
         "weight": "bold",
         "color": "#FFD700",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       }
@@ -2290,7 +2303,7 @@ def bot(op):
                         contact = cl.getContact(op.param2)
                         data = {
                                 "type": "flex",
-                                "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+                                "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
                                 "contents": {
   "styles": {
     "body": {
@@ -2306,7 +2319,7 @@ def bot(op):
       {
         "contents": [
           {
-            "text": "☯️ᴛᴇʀᴛᴀɴɢᴋᴀᴘ\n☯️ ngintip\n☯️ᴊᴀɴᴅᴀ😜\n☯️ʙᴀʀᴜ\n☯️sᴇʟᴇsᴀɪ ᴍᴀɴᴅɪ\n\n\n✍️ᴊᴏɴᴇs ᴜsᴇʀ",
+            "text": "☯️ᴛᴇʀᴛᴀɴɢᴋᴀᴘ\n☯️ ngintip\njanda/duda😜\n☯️ʙᴀʀᴜ\n☯️sᴇʟᴇsᴀɪ ᴍᴀɴᴅɪ\n\n\n✍️ᴊᴏɴᴇs ᴜsᴇʀ",
             "size": "sm",
             "color": "#FFD700",
             "wrap": True,
@@ -2340,7 +2353,7 @@ def bot(op):
                 "url": "https://obs.line-scdn.net/{}".format(cl.getContact(op.param2).pictureStatus),
               },
               {
-                "text":"☯️ɪᴅᴇɴᴛɪᴛᴀs: ᴀɴᴀᴋ ᴊᴀʟᴀɴᴀɴ\n☯️ʜᴜʙᴜɴɢᴀɴ: ᴊᴏᴍʙʟᴏ ɴɢᴇɴᴇs\n☯️ʜᴏʙɪ: sᴜᴋᴀ ɴɪᴋᴜɴɢ sᴀɴᴀ sɪɴɪ\n☯️ᴋᴇᴜᴀɴɢᴀɴ: sᴏᴋ ᴋᴀʏᴀᴋ\n☯️ɴᴀᴍᴀ:  {}\n\nsᴜᴘᴘᴏʀᴛ ᴛᴇᴀᴍ Cannibal ᴋɪʟʟᴇʀ".format(cl.getContact(op.param2).displayName),
+                "text":"☯️ɪᴅᴇɴᴛɪᴛᴀs:ᴊᴏᴍʙʟᴏ\n☯️ʜᴜʙᴜɴɢᴀɴ: ᴊᴏᴍʙʟᴏ ɴɢᴇɴᴇs\n☯️ʜᴏʙɪ: sᴜᴋᴀ ɴɪᴋᴜɴɢ sᴀɴᴀ sɪɴɪ\n☯️ᴋᴇᴜᴀɴɢᴀɴ: PAS PASAN\n☯️ɴᴀᴍᴀ:  {}\n\nsᴜᴘᴘᴏʀᴛ ᴛᴇᴀᴍ 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶".format(cl.getContact(op.param2).displayName),
                 "size": "sm",
                 "margin": "none",
                 "color": "#FF0000",
@@ -2376,7 +2389,7 @@ def bot(op):
               "action": {
                   "type": "uri",
                   "label": "ᴄʀᴇᴀᴛᴏʀ",
-                  "uri": "http://line.me/ti/p/~aryopandelaki"
+                  "uri": "http://line.me/ti/p/~akusayangpadamu12"
               }
           }, {
               "flex": 3,
@@ -2387,8 +2400,8 @@ def bot(op):
               "height": "sm",
               "action": {
                   "type": "uri",
-                  "label": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
-                  "uri": "http://line.me/ti/p/~aryopandelaki"  
+                  "label": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
+                  "uri": "http://line.me/ti/p/~akusayangpadamu12"  
               }
           }]
       }]
@@ -2676,7 +2689,7 @@ def bot(op):
                         elif cmd == "help":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
-                               sendTextTemplate3(msg.to, "ʜᴇʟᴘ\nᴍᴇɴᴜ\nʜᴇʟᴘ¹\nʜᴇʟᴘ²\nʜᴇʟᴘ³\nʜᴇʟᴘ⁴\nʜᴇʟᴘ⅝\nᴍʏsᴇᴛ\nᴊᴏᴏx-ᴊᴜᴅᴜʟ\nɢs ᴛᴀɢ\nᴋᴄ ᴛᴀɢ\nʜᴇʀᴇ\nᴏᴜᴛ\nʀs\nʙᴄ¹:\nʙʀᴏᴀᴅᴄᴀsᴛ:\nᴀʙᴏᴜᴛ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴏʟᴀᴛᴇ ʙʏᴇ : 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿")
+                               sendTextTemplate3(msg.to, "ʜᴇʟᴘ\nᴍᴇɴᴜ\nʜᴇʟᴘ¹\nʜᴇʟᴘ²\nʜᴇʟᴘ³\nʜᴇʟᴘ⁴\nʜᴇʟᴘ⅝\nᴍʏsᴇᴛ\nᴊᴏᴏx-ᴊᴜᴅᴜʟ\nɢs ᴛᴀɢ\nᴋᴄ ᴛᴀɢ\nʜᴇʀᴇ\nᴏᴜᴛ\nʀs\nʙᴄ¹:\nʙʀᴏᴀᴅᴄᴀsᴛ:\nᴀʙᴏᴜᴛ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴏʟᴀᴛᴇ ʙʏᴇ : 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶")
  
                         elif cmd == "self off":
                             if msg._from in admin:
@@ -2686,7 +2699,7 @@ def bot(op):
                         elif cmd == "help1":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
-                               sendTextTemplate3(msg.to, "ɴᴏᴛᴀɢ ᴏɴ|ᴏғғ\nᴀʟʟᴘʀᴏ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴜʀʟ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ ᴏɴ|ᴏғғ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿")                 
+                               sendTextTemplate3(msg.to, "ɴᴏᴛᴀɢ ᴏɴ|ᴏғғ\nᴀʟʟᴘʀᴏ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴜʀʟ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴊᴏɪɴ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴋɪᴄᴋ ᴏɴ|ᴏғғ\nᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ ᴏɴ|ᴏғғ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶")                 
                         elif cmd == "help2":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -2695,15 +2708,15 @@ def bot(op):
                         elif cmd == "help3":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
-                               sendTextTemplate3(msg.to, "ʜᴀʜ\nsᴜᴇ\nᴡᴏʏ/ᴄᴏʟᴏᴋ\nsᴇᴅɪʜ\nsᴇᴘɪ\nʜᴀᴅᴇʜ\nᴊᴜᴍʟᴀʜ:\nsᴛᴀɢ ᴛᴀɢ\nsᴘᴀᴍᴄᴀʟʟ: ᴊᴜᴍʟᴀʜ\nsᴘᴀᴍᴄᴀʟʟ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿")
+                               sendTextTemplate3(msg.to, "ʜᴀʜ\nsᴜᴇ\nᴡᴏʏ/ᴄᴏʟᴏᴋ\nsᴇᴅɪʜ\nsᴇᴘɪ\nʜᴀᴅᴇʜ\nᴊᴜᴍʟᴀʜ:\nsᴛᴀɢ ᴛᴀɢ\nsᴘᴀᴍᴄᴀʟʟ: ᴊᴜᴍʟᴀʜ\nsᴘᴀᴍᴄᴀʟʟ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶")
                         elif cmd == "help4":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
-                               sendTextTemplate3(msg.to, "ʀᴇsᴘᴏɴ ᴏɴ|ᴏғғ\nᴄᴏɴᴛᴀᴄᴛ ᴏɴ|ᴏғғ\nᴀᴜᴛᴏᴊᴏɪɴ ᴏɴ|ᴏғғ\nᴀᴜᴛᴏᴀᴅᴅ ᴏɴ|ᴏғғ\nᴀᴜᴛᴏʟᴇᴀᴠᴇ ᴏɴ|ᴏғғ\nᴡᴇʟᴄᴏᴍᴇ ᴏɴ|ᴏғғ\nᴄᴏʟᴏᴋ ᴏɴ|ᴏғғ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿")
+                               sendTextTemplate3(msg.to, "ʀᴇsᴘᴏɴ ᴏɴ|ᴏғғ\nᴄᴏɴᴛᴀᴄᴛ ᴏɴ|ᴏғғ\nᴀᴜᴛᴏᴊᴏɪɴ ᴏɴ|ᴏғғ\nᴀᴜᴛᴏᴀᴅᴅ ᴏɴ|ᴏғғ\nᴀᴜᴛᴏʟᴇᴀᴠᴇ ᴏɴ|ᴏғғ\nᴡᴇʟᴄᴏᴍᴇ ᴏɴ|ᴏғғ\nᴄᴏʟᴏᴋ ᴏɴ|ᴏғғ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶")
                         elif cmd == "help5":
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin:
-                               sendTextTemplate3(msg.to, "ᴀᴅᴍɪɴ:ᴏɴ\nᴀᴅᴍɪɴ:ʀᴇᴘᴇᴀᴛ\nsᴛᴀғғ:ᴏɴ\nsᴛᴀғғ:ʀᴇᴘᴇᴀᴛ\nᴀᴅᴍɪɴᴀᴅᴅ ᴛᴀɢ\nᴀᴅᴍɪɴᴅᴇʟʟ ᴛᴀɢ\nsᴛᴀғғᴀᴅᴅ ᴛᴀɢ\nsᴛᴀғғᴅᴇʟʟ ᴛᴀɢ\nʙᴏᴛᴀᴅᴅ ᴛᴀɢ\nʙᴏᴛᴅᴇʟʟ ᴛᴀɢ\nʀᴇғʀᴇsʜ\nʟɪsᴛʙᴏᴛ\nʟɪsᴛᴀᴅᴍɪɴ\nʟɪsᴛᴘʀᴏᴛᴇᴄᴛ\nsᴇʟғ ᴏɴ|ᴏғғ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿")
+                               sendTextTemplate3(msg.to, "ᴀᴅᴍɪɴ:ᴏɴ\nᴀᴅᴍɪɴ:ʀᴇᴘᴇᴀᴛ\nsᴛᴀғғ:ᴏɴ\nsᴛᴀғғ:ʀᴇᴘᴇᴀᴛ\nᴀᴅᴍɪɴᴀᴅᴅ ᴛᴀɢ\nᴀᴅᴍɪɴᴅᴇʟʟ ᴛᴀɢ\nsᴛᴀғғᴀᴅᴅ ᴛᴀɢ\nsᴛᴀғғᴅᴇʟʟ ᴛᴀɢ\nʙᴏᴛᴀᴅᴅ ᴛᴀɢ\nʙᴏᴛᴅᴇʟʟ ᴛᴀɢ\nʀᴇғʀᴇsʜ\nʟɪsᴛʙᴏᴛ\nʟɪsᴛᴀᴅᴍɪɴ\nʟɪsᴛᴘʀᴏᴛᴇᴄᴛ\nsᴇʟғ ᴏɴ|ᴏғғ\n\nᴄʀᴇᴀᴛᴏʀ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏᴇ : 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶")
                         
                         elif cmd == "promo1":
                             if msg._from in admin:
@@ -2716,7 +2729,7 @@ def bot(op):
         "aspectMode": "cover",
         "url": "https://media0.giphy.com/media/xVxio2tNLAM5q/200w.webp?cid=19f5b51a5c44951d4b47664273e6c074",
         "action": {
-          "uri": "http://line.me/ti/p/~aryopandelaki",
+          "uri": "http://line.me/ti/p/~akusayangpadamu12",
           "type": "uri"
         },
         "type": "image",
@@ -2737,7 +2750,7 @@ def bot(op):
       "body": {
         "contents": [
           {
-            "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿 ᴛᴇᴍᴘʟᴀᴛᴇ",
+            "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "color": "#00FFFF",
             "wrap": True,
             "weight": "bold",
@@ -2905,7 +2918,7 @@ def bot(op):
             "color": "#000000",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~aryopandelaki"
+              "uri": "http://line.me/ti/p/~akusayangpadamu12"
             },
             "align": "center"            
           }
@@ -2918,14 +2931,14 @@ def bot(op):
         "contents": [
           {
             "type": "text",
-            "text": "ᴋᴇᴘᴏɪɴ sᴇᴋᴀʀᴀɴɢ\nhttp://line.me/ti/p/~aryopandelaki",
+            "text": "ᴋᴇᴘᴏɪɴ sᴇᴋᴀʀᴀɴɢ\nhttp://line.me/ti/p/~akusayangpadamu12",
             "size": "xl",
             "wrap": True,
             "weight": "bold",
             "color": "#000000",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~aryopandelaki"
+              "uri": "http://line.me/ti/p/~akusayangpadamu12"
             },
             "align": "center"                            
           }
@@ -2943,7 +2956,7 @@ def bot(op):
                                 status = cl.getContact(sender)                               	
                                 data = {
                                         "type": "flex",
-                                        "altText": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+                                        "altText": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
                                         "contents": {
 "type": "bubble",
   "body": {
@@ -3033,7 +3046,7 @@ def bot(op):
         "color": "#E5E4E2",
         "action": {
           "type": "uri",
-          "uri": "http://line.me/ti/p/~aryopandelaki"
+          "uri": "http://line.me/ti/p/~akusayangpadamu12"
         },
         "align": "center"
       }
@@ -3083,7 +3096,7 @@ def bot(op):
             "color": "#FF0000"
           },
           {
-            "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿\n\nᴍᴘ³",
+            "text": "⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶\n\nᴍᴘ³",
             "size": "sm",
             "color": "#FF0000",
             "wrap": True,
@@ -3171,7 +3184,7 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "           􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿\n"
+                                md = "           ⁣𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶\n"
                                 if wait["sticker"] == True: md+="║😁 Sticker On\n"
                                 else: md+="║😑 Sticker Off\n"
                                 if wait["left"] == True: md+="║😁 Left On\n"
@@ -3206,7 +3219,7 @@ def bot(op):
 
                         elif cmd == "owner" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendMessage(msg.to, "") 
+                                cl.sendMessage(msg.to, "uafe5c4198aa3bbceba5502798d8a2c16") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
@@ -3218,8 +3231,8 @@ def bot(op):
                                 groups = cl.getGroupIdsJoined()
                                 contacts = cl.getAllContactIds()
                                 blockeds = cl.getBlockedContactIds()
-                                crt = "u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540"
-                                supp = "u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540"
+                                crt = "uafe5c4198aa3bbceba5502798d8a2c16",#"u3a1a2458a60d209a3d4802e789b7d540"
+                                supp = "uafe5c4198aa3bbceba5502798d8a2c16",#"u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540","u3a1a2458a60d209a3d4802e789b7d540"
                                 suplist = []
                                 lists = []
                                 tz = pytz.timezone("Asia/Makassar")
@@ -3261,7 +3274,7 @@ def bot(op):
             "color": "#FF0000"
           },
           {
-            "text": "   Cannibal \nᴛᴇᴀᴍ\n\nsᴇʟғʙᴏᴛ",
+            "text": "   𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶 \nᴛᴇᴀᴍ\n\nsᴇʟғʙᴏᴛ",
             "size": "sm",
             "color": "#FF0000",
             "wrap": True,
@@ -3280,7 +3293,7 @@ def bot(op):
       {
         "contents": [
           {
-            "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+            "text": "𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "size": "xl",
             "align": "center",
             "color": "#00FFFF",
@@ -3410,7 +3423,7 @@ def bot(op):
                 "size": "md"
               },
               {
-                "text": "ᴠᴇʀsɪ : 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+                "text": "ᴠᴇʀsɪ : 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
                 "size": "xs",
                 "margin": "none",
                 "color": "#FFFF00",
@@ -3430,7 +3443,7 @@ def bot(op):
                 "size": "md"
               },
               {
-                "text": "sᴜᴘᴏʀᴛ ʙʏᴇ\􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+                "text": "sᴜᴘᴏʀᴛ ʙʏᴇ\𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
                 "size": "xs",
                 "margin": "none",
                 "color": "#FF6347",
@@ -3629,7 +3642,7 @@ def bot(op):
         "aspectMode": "cover",
         "url": "https://d.top4top.io/p_1548z7gji0.jpg",
         "action": {
-          "uri": "http://line.me/ti/p/~aryopandelaki",
+          "uri": "http://line.me/ti/p/~akusayangpadamu12",
           "type": "uri"
         },
         "type": "image",
@@ -3690,7 +3703,7 @@ def bot(op):
             "color": "#FFFFFF",
             "action": {
               "type": "uri",
-              "uri": "http://line.me/ti/p/~aryopandelaki"
+              "uri": "http://line.me/ti/p/~akusayangpadamu12"
             },
             "align": "center"            
           }
@@ -3703,7 +3716,7 @@ def bot(op):
         "contents": [
           {
             "type": "text",
-            "text": "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿",
+            "text": "𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶",
             "size": "xl",
             "wrap": True,
             "weight": "bold",
@@ -3781,7 +3794,7 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(cl.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                sendTextTemplate8(msg.to, "☯️􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿☯️Grup Info\n\n☯️Nama Group : {}".format(G.name)+ "\n☯️ID Group : {}".format(G.id)+ "\n☯️Pembuat : {}".format(G.creator.displayName)+ "\n☯️Waktu Dibuat : {}".format(str(timeCreated))+ "\n☯️Jumlah Member : {}".format(str(len(G.members)))+ "\n☯️Jumlah Pending : {}".format(gPending)+ "\n☯️Group Qr : {}".format(gQr)+ "\n☯️Group Ticket : {}".format(gTicket))
+                                sendTextTemplate8(msg.to, "☯️𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶☯️Grup Info\n\n☯️Nama Group : {}".format(G.name)+ "\n☯️ID Group : {}".format(G.id)+ "\n☯️Pembuat : {}".format(G.creator.displayName)+ "\n☯️Waktu Dibuat : {}".format(str(timeCreated))+ "\n☯️Jumlah Member : {}".format(str(len(G.members)))+ "\n☯️Jumlah Pending : {}".format(gPending)+ "\n☯️Group Qr : {}".format(gQr)+ "\n☯️Group Ticket : {}".format(gTicket))
                                 cl.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
                             except Exception as e:
                                 sendTextTemplate(msg.to, str(e))
@@ -4098,7 +4111,7 @@ def bot(op):
                                     a = a + 1
                                     end = '\n'
                                     ma += str(a) + ". " +cl.getContact(m_id).displayName + "\n"
-                                sendTextTemplate3(msg.to,"☯️ʟɪsᴛ ʙᴏᴛ☯️\n\n"+ma+"\n☯️ᴛᴏᴛᴀʟ ʙᴏᴛ 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿「%s」☯️" %(str(len(Bots))))
+                                sendTextTemplate3(msg.to,"☯️ʟɪsᴛ ʙᴏᴛ☯️\n\n"+ma+"\n☯️ᴛᴏᴛᴀʟ ʙᴏᴛ 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶「%s」☯️" %(str(len(Bots))))
 
                         elif cmd == "cekad":
                           if wait["selfbot"] == True:
@@ -4121,7 +4134,7 @@ def bot(op):
                                     c = c + 1
                                     end = '\n'
                                     mc += str(c) + ". " +cl.getContact(m_id).displayName + "\n"
-                                sendTextTemplate3(msg.to,"☯️ᴀᴅᴍɪɴ 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿☯️\n\n☯️sᴜᴘᴇʀ ᴀᴅᴍɪɴ :\n"+ma+"\n☯️ᴀᴅᴍɪɴ :\n"+mb+"\n☯️sᴛᴀғғ :\n"+mc+"\n☯️ᴊᴜᴍʟᴀʜ ᴀᴅᴍɪɴ 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿「%s」☯️" %(str(len(owner)+len(admin)+len(staff))))
+                                sendTextTemplate3(msg.to,"☯️ᴀᴅᴍɪɴ 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶☯️\n\n☯️sᴜᴘᴇʀ ᴀᴅᴍɪɴ :\n"+ma+"\n☯️ᴀᴅᴍɪɴ :\n"+mb+"\n☯️sᴛᴀғғ :\n"+mc+"\n☯️ᴊᴜᴍʟᴀʜ ᴀᴅᴍɪɴ 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶「%s」☯️" %(str(len(owner)+len(admin)+len(staff))))
 
                         elif cmd == "cekpro":
                           if wait["selfbot"] == True:
@@ -4154,7 +4167,7 @@ def bot(op):
                                     c = c + 1
                                     end = '\n'
                                     mc += str(c) + ". " +cl.getGroup(group).name + "\n"
-                                sendTextTemplate3(msg.to,"☯️ᴄᴇᴋ ᴘʀᴏ ɢʀᴏᴜᴘ☯️\n\n☯️ᴘʀᴏ ᴜʀʟ :\n"+ma+"\n☯️ᴘʀᴏ ᴋɪᴄᴋ :\n"+mb+"\n☯️ᴘʀᴏ ᴊᴏɪɴ :\n"+md+"\n☯️ᴘʀᴏ ᴄᴀɴᴄᴇʟ :\n"+mc+"\n☯️ᴊᴜᴍʟᴀʜ ☯️%s☯️ɢʀᴏᴜᴘ 􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿 ᴊᴀɢᴀ" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel))))
+                                sendTextTemplate3(msg.to,"☯️ᴄᴇᴋ ᴘʀᴏ ɢʀᴏᴜᴘ☯️\n\n☯️ᴘʀᴏ ᴜʀʟ :\n"+ma+"\n☯️ᴘʀᴏ ᴋɪᴄᴋ :\n"+mb+"\n☯️ᴘʀᴏ ᴊᴏɪɴ :\n"+md+"\n☯️ᴘʀᴏ ᴄᴀɴᴄᴇʟ :\n"+mc+"\n☯️ᴊᴜᴍʟᴀʜ ☯️%s☯️ɢʀᴏᴜᴘ 𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶 ᴊᴀɢᴀ" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel))))
 
                         elif cmd == "cani":
                           if wait["selfbot"] == True:
@@ -4208,7 +4221,7 @@ def bot(op):
                                 sendTextTemplate4(msg.to, "☯️ɢᴏᴏᴅ ʙʏᴇ☯️\n       "+str(G.name))
                                 cl.leaveGroup(msg.to)
 
-                        elif cmd.startswith("􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿 "):
+                        elif cmd.startswith("𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶 "):
                           if msg._from in admin:
                             separate = text.split(" ")
                             number = text.replace(separate[0] + " ","")
@@ -4400,7 +4413,7 @@ def bot(op):
                                 get_profile_time_start = time.time() / 3
                                 get_profile = cl.getProfile()
                                 get_profile_time = time.time() / 3 - get_profile_time_start
-                                sendTextTemplate(msg.to, "􂤂􀄁􏿿􂤂􀄌􏿿􂤂􀄉􏿿􂤂􀄐°™ᴀʟɪᴘ•􏿿")
+                                sendTextTemplate(msg.to, "𓆩𝓂𝓊𝓈𝓎𝒶𝒻𝒾𝓇𝒸𝒾𝓃𝓉𝒶")
                                 sendTextTemplate(msg.to, "╭═══════════╮\n%.10f Seccond\n╰═══════════╯" % (get_profile_time/3))
 
                         elif cmd == "lurking on":

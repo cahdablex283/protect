@@ -127,7 +127,7 @@ wait = {
     "unsend":True,
     "arespon":True,
     "mention":"Ciluk bah Yang ngintip mending Gabung Chat sini -_-",
-    "Respontag":"Gak usah ngetag mending pm bisa desahan",
+    "Respontag":"Gak usah ngetag mending mojok aja biar syahdu -_-",
     "welcome":"Selamat datang & semoga betah n bahagia",
     "message":"ᴛʜᴀɴᴋs ᴛᴏ ᴀᴅᴅ ᴍᴇ..\n\n                 ᴼᴾᴱᴺ ᴼᴿᴰᴱᴿ\n────────┅┅───────\nᴛᴇʀɪᴍᴀ ᴊᴀsᴀ ᴘᴇɴɢʜᴀɴᴄᴜʀ:\n[]➣ ᴍᴀɴᴛᴀɴ\n[]➣ ᴋᴀɴɢ ʙᴀᴘᴇʀ\n[]➣ ᴋᴀɴɢ-ᴋᴜɴɢ\n[]➣ ᴋᴀɴɢ ᴘᴀʟᴀᴋ\n[]➣ ᴘᴇʀᴜsᴀᴋ ʜᴜʙᴜɴɢᴀɴ\n[]➣ ᴘᴏᴋᴏᴋɴʏᴀ ᴀᴘᴀ ᴀᴊᴀ ᴅᴇʜʜ\n\nsᴇᴡᴀɪɴ ʙᴏᴛ:\n[]➣ ᴘᴇᴍʙᴜᴀᴛᴀɴ ɢɪᴛʜᴜʙ sᴄ ʙᴏᴛ 100K/SC\n[]➣ ᴘʀᴏᴛᴇᴄᴛ ʀᴏᴏᴍ ᴇᴠᴇɴᴛ /dll 200K\n[]➣ sᴇʟғʙᴏᴛ (ғʀᴇᴇ ʟᴏɢɪɴ ᴊs ʙʏᴘᴀss) 50K\n────────┅┅───────\nʙᴇʀɢᴀʀᴀɴsɪ sᴇʟᴀᴍᴀ sᴇᴡᴀ\nʜᴀʀɢᴀ ɴᴇɢᴏ, ᴊɪᴋᴀ ʙᴇʀᴍɪɴᴀᴛ\nʜᴜʙᴜɴɢɪ ᴋᴀᴍɪ.\n────────┅┅───────\n                  ɪɴᴊᴀᴋ ɴɪʜ\n[]➣ http://line.me/ti/p/~akusayangpadamu12\n[]➣ http://line.me/ti/p/~akusayangpadamu12\n────────┅┅───────\n Bot Protection\n────────┅┅───────",
     }

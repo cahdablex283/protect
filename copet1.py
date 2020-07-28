@@ -22,31 +22,18 @@ requests.packages.urllib3.disable_warnings()
 # ᴘʀɪᴍᴇʀʏ ᴅᴀɴ ɢᴍᴀɪʟ
 #=====================================
 # ᴀᴋᴜɴ ᴜᴛᴀᴍᴀ
-try:
-    header = "ios_ipad"
-    auth = "Z6vMBEnkp04n"
-    result = json.loads(requests.get("https://api.boteater.us/line_qr_v2?header="+header+"&auth="+auth).text)
-    print("Login IP: {}".format(result["result"]["login_ip"]))
-    print("QR Link: {}".format(result["result"]["qr_link"]))
-    result = json.loads(requests.get(result["result"]["callback"]+"&auth="+auth).text)
-    if result["status"] != 200:
-      raise Exception("Timeout!!!")
-    print("Pincode: "+result["result"]["pin_code"])
-    result = json.loads(requests.get(result["result"]["callback"]+"&auth="+auth).text)
-    if result["status"] != 200:
-      raise Exception("Timeout!!!")
-    cl = LINE(result["result"]["token"],appName="IOSIPAD\t9.18.1\tiPhone X\t12.4.1")
-    print("Login Sukses")
-except:pass 
+cl = LINE("teguhsuncoko456@gmail.com","polisi12")
+cl.log("Auth Token : " + str(cl.authToken))
+cl.log("Timeline Token : " + str(cl.tl.channelAccessToken)) 
 #==============[●●●●●●]==============#
 print ("=========== LOGIN SUCSES ==========")
 
 oepoll = OEPoll(cl)
 call = cl
-creator = ["uafe5c4198aa3bbceba5502798d8a2c16"]
-owner = ["uafe5c4198aa3bbceba5502798d8a2c16"]
-admin = ["uafe5c4198aa3bbceba5502798d8a2c16"]
-staff = ["uafe5c4198aa3bbceba5502798d8a2c16"]
+creator = ["ue84077e7293ef6be0e692edeb314fdcd"]
+owner = ["ue84077e7293ef6be0e692edeb314fdcd"]
+admin = ["ue84077e7293ef6be0e692edeb314fdcd"]
+staff = ["ue84077e7293ef6be0e692edeb314fdcd"]
 #==============================================================================
 lineProfile = cl.getProfile()
 mid = cl.getProfile().mid

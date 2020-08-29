@@ -24,15 +24,15 @@ botStart = time.time()
 msg_dict = {}
 msg_dict1 = {}
 #==============[ token 1 ]==============#
-cl = LINE("@gmail.com","password")
+cl = LINE("idabolalang@gmail.com","polytron11")
 cl.log("Auth Token : " + str(cl.authToken))
 cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 
-ki = LINE("@gmail.com","password")
+ki = LINE("jabrikganteng2@gmail.com","polytron11")
 ki.log("Auth Token : " + str(ki.authToken))
 ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
-kk = LINE("@gmail.com","password")
+kk = LINE("setiawa564@gmail.com","polytron11")
 kk.log("Auth Token : " + str(kk.authToken))
 kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
@@ -40,11 +40,11 @@ kc = LINE("@gmail.com","password")
 kc.log("Auth Token : " + str(kc.authToken))
 kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
-be = LINE("@gmail.com","password")
+be = LINE("tukijosastro12@gmail.com","polytron11")
 be.log("Auth Token : " + str(be.authToken))
 be.log("Timeline Token : " + str(be.tl.channelAccessToken))
 
-sw = LINE("@gmail.com","password")
+sw = LINE("saryantomukti31@gmail.com","polytron11")
 sw.log("Auth Token : " + str(sw.authToken))
 sw.log("Timeline Token : " + str(sw.tl.channelAccessToken))
 
@@ -64,10 +64,10 @@ KAC = [cl,ki,kk,kc]
 ABC = [cl,ki,kk,kc]
 GHOST = [be,sw]
 Bots = [mid,Amid,Bmid,Cmid,Jmid,Zmid]
-creator = ["u8ec2b08172657f4012a42ca26d4dd7c5"]
-owner = ["u8ec2b08172657f4012a42ca26d4dd7c5"]
-admin = ["u8ec2b08172657f4012a42ca26d4dd7c5","u3f9c3061f8e7a7c4e07d5f6be08b9339"]
-staff = ["u8ec2b08172657f4012a42ca26d4dd7c5"]
+creator = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724"]
+owner = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724"]
+admin = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724","u3f9c3061f8e7a7c4e07d5f6be08b9339"]
+staff = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724"]
 Cannibal = admin + staff
 
 protectqr = []

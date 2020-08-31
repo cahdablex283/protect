@@ -24,29 +24,29 @@ botStart = time.time()
 msg_dict = {}
 msg_dict1 = {}
 #==============[ token 1 ]==============#
-cl = LINE("idabolalang@gmail.com","polytron11")
+cl = LINE("neko56793@gmail.com","polytron11")
 cl.log("Auth Token : " + str(cl.authToken))
 cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
 
-ki = LINE("jabrikganteng2@gmail.com","polytron11")
-ki.log("Auth Token : " + str(ki.authToken))
-ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+#ki = LINE("jabrikganteng2@gmail.com","polytron11")
+#ki.log("Auth Token : " + str(ki.authToken))
+#ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
-kk = LINE("setiawa564@gmail.com","polytron11")
-kk.log("Auth Token : " + str(kk.authToken))
-kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+#kk = LINE("setiawa564@gmail.com","polytron11")
+#kk.log("Auth Token : " + str(kk.authToken))
+#kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
-kc = LINE("@gmail.com","password")
-kc.log("Auth Token : " + str(kc.authToken))
-kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+#kc = LINE("@gmail.com","password")
+#kc.log("Auth Token : " + str(kc.authToken))
+#kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
-be = LINE("tukijosastro12@gmail.com","polytron11")
-be.log("Auth Token : " + str(be.authToken))
-be.log("Timeline Token : " + str(be.tl.channelAccessToken))
+#be = LINE("tukijosastro12@gmail.com","polytron11")
+#be.log("Auth Token : " + str(be.authToken))
+#be.log("Timeline Token : " + str(be.tl.channelAccessToken))
 
-sw = LINE("saryantomukti31@gmail.com","polytron11")
-sw.log("Auth Token : " + str(sw.authToken))
-sw.log("Timeline Token : " + str(sw.tl.channelAccessToken))
+#sw = LINE("saryantomukti31@gmail.com","polytron11")
+#sw.log("Auth Token : " + str(sw.authToken))
+#sw.log("Timeline Token : " + str(sw.tl.channelAccessToken))
 
 print ("=========== ʟᴏɢɪɴ sᴜᴄᴄᴇs ʙᴏssᴋᴜ ==========")
 
@@ -54,20 +54,20 @@ foepoll = OEPoll(cl)
 
 mid = cl.profile.mid
 mid = cl.getProfile().mid
-Amid = ki.getProfile().mid
-Bmid = kk.getProfile().mid
-Cmid = kc.getProfile().mid
-Jmid = be.getProfile().mid
-Zmid = sw.getProfile().mid
+#Amid = ki.getProfile().mid
+#Bmid = kk.getProfile().mid
+#Cmid = kc.getProfile().mid
+#Jmid = be.getProfile().mid
+#Zmid = sw.getProfile().mid
 #===========================================================================================
-KAC = [cl,ki,kk,kc]
-ABC = [cl,ki,kk,kc]
-GHOST = [be,sw]
-Bots = [mid,Amid,Bmid,Cmid,Jmid,Zmid]
-creator = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724"]
-owner = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724"]
-admin = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724","u3f9c3061f8e7a7c4e07d5f6be08b9339"]
-staff = ["u2a34f77f014fd1c6c0d9f2c0c8cd9724"]
+KAC = [cl]
+ABC = [cl]
+#GHOST = [be,sw]
+Bots = [mid]
+creator = ["u40757a9d2ed6f5c4cc8fa0cd4c2c9453"]
+owner = ["u40757a9d2ed6f5c4cc8fa0cd4c2c9453"]
+admin = ["u40757a9d2ed6f5c4cc8fa0cd4c2c9453","u3f9c3061f8e7a7c4e07d5f6be08b9339"]
+staff = ["u40757a9d2ed6f5c4cc8fa0cd4c2c9453"]
 Cannibal = admin + staff
 
 protectqr = []
@@ -77,9 +77,9 @@ protectinvite = []
 protectcancel = []
 welcome = []
 
-responsename1 = ki.getProfile().displayName
-responsename2 = kk.getProfile().displayName
-responsename3 = kc.getProfile().displayName
+#responsename1 = ki.getProfile().displayName
+#responsename2 = kk.getProfile().displayName
+#responsename3 = kc.getProfile().displayName
 
 settings = {
     "Picture":False,
@@ -152,7 +152,7 @@ wait = {
     "unsend":True,
     "arespon":True,
     "mention1":False,
-    "Respontag":"Sekali lagi tag gue  , gue tabok looohhh  ",
+    "Respontag":"Sekali lagi tag gue  , gue Cipok loe  ",
     "welcome":"Selamat datang & semoga betah n bahagia",
     "message":"╭──────────────────╮\n├☯️ ᴛʜᴀɴᴋs ᴛᴏ ᴀᴅᴅ ᴍᴇ..    │\n╰──────────────────╯\n╭──────────────────\nᴛᴇʀɪᴍᴀ ᴊᴀsᴀ ᴘᴇɴɢʜᴀɴᴄᴜʀ:\n[]➣ ᴍᴀɴᴛᴀɴ\n[]➣ ᴋᴀɴɢ ʙᴀᴘᴇʀ\n[]➣ ᴋᴀɴɢ-ᴋᴜɴɢ\n[]➣ ᴋᴀɴɢ ᴘᴀʟᴀᴋ\n[]➣ ᴘᴇʀᴜsᴀᴋ ʜᴜʙᴜɴɢᴀɴ\n[]➣ ᴘᴏᴋᴏᴋɴʏᴀ ᴀᴘᴀ ᴀᴊᴀ ᴅᴇʜʜ\n\nsᴇᴡᴀɪɴ ʙᴏᴛ:\n[]➣ ᴘᴇᴍʙᴜᴀᴛᴀɴ ɢɪᴛʜᴜʙ sᴄ ʙᴏᴛ 100K/SC\n[]➣ ᴘʀᴏᴛᴇᴄᴛ ʀᴏᴏᴍ ᴇᴠᴇɴᴛ /dll 200K\n[]➣ sᴇʟғʙᴏᴛ (ғʀᴇᴇ ʟᴏɢɪɴ ᴊs ʙʏᴘᴀss) 50K\n────────┅┅───────\nʙᴇʀɢᴀʀᴀɴsɪ sᴇʟᴀᴍᴀ sᴇᴡᴀ\nʜᴀʀɢᴀ ɴᴇɢᴏ, ᴊɪᴋᴀ ʙᴇʀᴍɪɴᴀᴛ\nʜᴜʙᴜɴɢɪ ᴋᴀᴍɪ.\n────────┅┅───────\n                  ɪɴᴊᴀᴋ ɴɪʜ\n[]➣ line.me/ti/p/~aryopandelaki\n[]➣ line.me/ti/p/~cannibalkiller\n────────┅┅───────\nCannibal Bot Protection\n────────┅┅───────",
     }

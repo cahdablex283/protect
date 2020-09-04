@@ -28,27 +28,17 @@ import requests,uvloop
 import wikipedia as wiki
 requests.packages.urllib3.disable_warnings()
 loop = uvloop.new_event_loop()
-try:
-    AbiOlengKiller = "api keyMu"
-    headers = {
-        "apiKey":AbiOlengKiller,
-        "appName": "CHROMEOS\t2.3.8\tChrome OS\t1",
-        "cert" : None,
-        "server": random.choice(["pool-1","pool-2"]),
-        "sysname": "AbiOleng"
-        }
-    main = json.loads(requests.get("https://api.be-team.me/qrv2",headers=headers).text)
-    print("QR Oleng: " + main["result"]["qr_link"])
-    if not headers["cert"]:
-        result = json.loads(requests.get(main["result"]["cb_pincode"],headers=headers).text)
-        print("Code Oleng: " + result["result"])
-    result = json.loads(requests.get(main["result"]["cb_token"],headers=headers).text)
-    if result["status"] != 200:
-        print("[ Error ] "+ result["reason"])
-    else:
-        AbiOlengKiller = LINE(result["result"]["token"],appName="CHROMEOS\t2.3.8\tChrome OS\t1")
-        print ("== ʟᴏɢɪɴ sᴜᴄᴄᴇs ʙᴏssᴋᴜ ᴀʙɪ ==")
-except:pass
+#==============================================================================#
+botStart = time.time()
+msg_dict = {}
+msg_dict1 = {}
+#==============[ token 1 ]==============#
+cl = LINE("neko56793@gmail.com","polytron11")
+cl.log("Auth Token : " + str(cl.authToken))
+cl.log("Timeline Token : " + str(cl.tl.channelAccessToken))
+
+print ("=========== ʟᴏɢɪɴ sᴜᴄᴄᴇs ʙᴏssᴋᴜ ==========")
+
 oepoll = OEPoll(AbiOlengKiller)
 mid = AbiOlengKiller.profile.mid
 mid = AbiOlengKiller.getProfile().mid
@@ -136,7 +126,7 @@ wait = {
     "unsend":True,
     "arespon":True,
     "mention1":True,
-    "Respontag":"sᴇᴋᴀʟɪ ʟᴀɢɪ ᴛᴀɢ, ᴍᴀᴜ ᴀʙɪ ᴅᴇsᴀʜɪɴ",
+    "Respontag":"FON CALL YUK",
     "welcome":"Selamat datang & semoga betah n bahagia",
     "message":"╭──────────────────╮\n├🔹ɴᴜᴍᴘᴀɴɢ ᴘʀᴏᴍᴏ ʏᴀ ᴋᴀᴋᴀᴋ    │\n╰──────────────────╯\n╭──────────────────\n├🔹ʀᴇᴀᴅʏ ʙᴏᴛ ᴘʀᴏᴛᴇᴄᴛ\n├🔹ʀᴏᴏᴍ sᴍᴜʟᴇ / ᴇᴠᴇɴᴛ \n├🔹ʀᴇᴀᴅʏ sʙ ᴏɴʟʏ \n├🔹sʙ ᴏɴʟʏ + ᴀᴊs \n├🔹sʙ + ᴀssɪsᴛ + ᴀᴊs \n├🔹ʟᴏɢɪɴ ᴊs / ʙʏᴘᴀs\n├🔹ɴᴇᴡ ᴘᴇᴍʙᴜᴀᴛᴀɴ sᴄ ʙᴏᴛ \n├🔹ɴᴇᴡ ʙᴇʟᴀᴊᴀʀ ʙᴏᴛ \n├🔹ᴘᴇᴍᴀsᴀɴɢ sʙ ᴋᴇ ᴛᴇᴍᴘʟᴀᴛᴇ\n├🔹ʀᴇᴀᴅʏ ᴀᴋᴜɴ ᴄᴏɪɴ\n├🔹ʀᴇᴀᴅʏ ᴄᴏɪɴ ɢɪғᴛ \n╰────────────────── \n╭─────────────────\n├ \n╰─────────────────",
     }
